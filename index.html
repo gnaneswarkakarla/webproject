@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chicken Curry Recipe</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="recipe-card">
+    <h1>Chicken Curry</h1>
+    <img src="https://www.licious.in/blog/wp-content/uploads/2020/12/Chicken-Curry-recipe.jpg" alt="centered image" width="400" height="300"/>
+    <div class="info">
+      <p>⏱️ Prep Time: 60 mins</p>
+      <p>🍽️ Serves: 4</p>
+    </div>
+
+    <!-- Show Serving Size -->
+    <button onclick="toggleSection('serving-size')">Show Serving Size</button>
+    <div id="serving-size" class="toggle-section hidden">
+      <p>This recipe serves 4 people. You can double the ingredients for 8 servings.</p>
+    </div>
+
+    <!-- Ingredients Section -->
+    <button onclick="toggleSection('ingredients')">Show Ingredients</button>
+    <ul id="ingredients" class="toggle-section hidden">
+      <li>500g chicken (boneless or bone-in)</li>
+      <li>2 onions, finely chopped</li>
+      <li>2 tomatoes, pureed</li>
+      <li>1 tbsp ginger garlic paste</li>
+      <li>1 tsp turmeric</li>
+      <li>2 tsp red chili powder</li>
+      <li>1 tbsp garam masala</li>
+      <li>1 cup yogurt</li>
+      <li>2 tbsp oil</li>
+      <li>Salt to taste</li>
+      <li>Fresh coriander for garnish</li>
+    </ul>
+
+    <!-- Steps Section -->
+    <button onclick="toggleSection('steps')">Show Steps</button>
+    <ol id="steps" class="toggle-section hidden">
+      <li>Heat oil in a pan and sauté chopped onions until golden brown.</li>
+      <li>Add ginger garlic paste and cook for 1 minute.</li>
+      <li>Add tomato puree, turmeric, chili powder, and cook until oil separates.</li>
+      <li>Add chicken and cook for 5 minutes, stirring occasionally.</li>
+      <li>Mix in yogurt, garam masala, and salt. Cover and cook for 25–30 minutes.</li>
+      <li>Garnish with coriander leaves and serve hot with rice or naan.</li>
+    </ol>
+
+    <!-- Cooking Controls -->
+    <div class="controls">
+      <button onclick="startCooking()">Start Cooking</button>
+      <button onclick="nextStep()">Next</button>
+      <span id="timer"></span>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
